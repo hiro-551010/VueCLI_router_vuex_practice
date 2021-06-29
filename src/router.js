@@ -6,6 +6,8 @@ import UsersPosts from './views/UsersPosts.vue'
 import UsersProfile from './views/UsersProfile.vue'
 import HeaderHome from './views/HeaderHome.vue'
 import HeaderUsers from './views/HeaderUsers.vue'
+import Home2 from './views/Home2.vue'
+import HeaderHome2 from './views/HeaderHome2.vue'
 
 // useはプラグインを適用するという意味
 Vue.use(Router);
@@ -47,6 +49,13 @@ export default new Router({
                 { path: "posts", component: UsersPosts },
                 { path: "profile", component: UsersProfile, name:"users-id-profile" }
             ] 
+        },
+        {
+            path:'/home2',
+            components: {
+                default: Home2,
+                header: HeaderHome2,
+            }
         },
         {
             path: '*', 
